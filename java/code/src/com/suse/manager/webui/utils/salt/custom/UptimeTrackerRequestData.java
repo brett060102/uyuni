@@ -20,10 +20,6 @@ import com.suse.salt.netapi.results.StateApplyResult;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-
 /**
  * Suse Uptime Tarcker Result Data from uptimetracker.requestdata
  */
@@ -37,24 +33,8 @@ public class UptimeTrackerRequestData {
      * Gets the Uptime Tracking report
      * @return the attestation report if available
      */
-    public Optional<StateApplyResult<CmdResult>> getUptimeTrackerReport() {
-        return Optional.ofNullable(uptimeTrackerResult);
+    public StateApplyResult<CmdResult> getUptimeTrackerReport() {
+        return uptimeTrackerResult;
     }
 
-    /**
-     * Gets all info returned as Map for inserting into the report entry
-     * @return returns data as Map.
-     */
-    public Map<String, Object> asMap() {
-        Map<String, Object> out = new HashMap<>();
-        getUptimeTrackeReport()
-                .map(StateApplyResult::getChanges)
-                .ifPresent(c -> {
-                    if (c.getRetcode() == 0) {
-                        out.put("dump-uptime-info", c.getStdout());
-                    }
-                });
-
-        return out;
-    }
 }
