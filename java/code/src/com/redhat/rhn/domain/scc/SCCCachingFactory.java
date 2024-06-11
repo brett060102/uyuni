@@ -607,7 +607,7 @@ public class SCCCachingFactory extends HibernateFactory {
     public static List<Map<String, Object>> listUpdateLastSeenCandidates(SCCCredentials cred) {
         List<Map<String, Object>> result = new ArrayList<>();
         List<Object[]> rows = getSession().createQuery(
-                "SELECT reg.sccLogin, reg.sccPasswd, si.checkin " +
+                "SELECT reg.sccLogin, reg.sccPasswd, si.checkin, si.uptime_data" +
                 "FROM com.redhat.rhn.domain.scc.SCCRegCacheItem AS reg " +
                 "JOIN reg.server AS s " +
                 "JOIN s.serverInfo AS si " +
@@ -621,6 +621,7 @@ public class SCCCachingFactory extends HibernateFactory {
             entry.put("scc_login", row[0].toString());
             entry.put("scc_passwd", row[1].toString());
             entry.put("checkin", row[2]);
+            entry.put("uptime_data", row[3].toString);
             result.add(entry);
         }
         return result;
