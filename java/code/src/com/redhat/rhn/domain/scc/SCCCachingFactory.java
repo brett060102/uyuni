@@ -621,7 +621,7 @@ public class SCCCachingFactory extends HibernateFactory {
             entry.put("scc_login", row[0].toString());
             entry.put("scc_passwd", row[1].toString());
             entry.put("checkin", row[2]);
-            entry.put("uptime_data", row[3].toString);
+            entry.put("uptime_data", row[3].toString());
             result.add(entry);
         }
         return result;
