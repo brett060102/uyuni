@@ -42,7 +42,8 @@ import java.util.stream.Collectors;
 public class SCCSystemRegistrationUpdateCachedItemsTest extends BaseTestCaseWithUser {
 
     private List<SCCRegCacheItem> testSystems;
-    private static final String UPTIME_TEST = "[\"2024-06-26:000000000000000000001111\",\"2024-06-27:111111111111110000000000\"]";
+    private static final String UPTIME_TEST = "[\"2024-06-26:000000000000000000001111\"," +
+                                               "\"2024-06-27:111111111111110000000000\"]";
 
     private void setupSystems(int systemSize) throws Exception {
         Path tmpSaltRoot = Files.createTempDirectory("salt");

@@ -75,7 +75,8 @@ public class SCCSystemRegistrationManagerTest extends BaseTestCaseWithUser {
     /**
      * Value for system uptime data.
      */
-    private static final String UPTIME_TEST = "[\"2024-06-26:000000000000000000001111\",\"2024-06-27:111111111111110000000000\"]";
+    private static final String UPTIME_TEST = "[\"2024-06-26:000000000000000000001111\"," +
+                                               "\"2024-06-27:111111111111110000000000\"]";
 
     @Test
     public void testSCCSystemRegistrationLifecycle() throws Exception {

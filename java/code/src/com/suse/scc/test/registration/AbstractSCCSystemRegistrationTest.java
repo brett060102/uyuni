@@ -36,7 +36,8 @@ public class AbstractSCCSystemRegistrationTest extends BaseTestCaseWithUser {
 
     private final SCCCredentials credentials = CredentialsFactory.createSCCCredentials("username", "password");
     private List<SCCRegCacheItem> testSystems;
-    private static final String UPTIME_TEST = "[\"2024-06-26:000000000000000000001111\",\"2024-06-27:111111111111110000000000\"]";
+    private static final String UPTIME_TEST = "[\"2024-06-26:000000000000000000001111\"," +
+                                               "\"2024-06-27:111111111111110000000000\"]";
 
     /**
      * Sets up systems for testing purposes.

@@ -63,7 +63,8 @@ public class SCCSystemRegistrationTest extends BaseTestCaseWithUser {
     private Integer systemSize;
     private Integer batchSize;
 
-    private static final String UPTIME_TEST = "[\"2024-06-26:000000000000000000001111\",\"2024-06-27:111111111111110000000000\"]";
+    private static final String UPTIME_TEST = "[\"2024-06-26:000000000000000000001111\"," +
+                                               "\"2024-06-27:111111111111110000000000\"]";
 
     @Override
     @BeforeEach
