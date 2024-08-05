@@ -27,8 +27,8 @@ import java.util.Optional;
  */
 public class UptimeTrackerRequestData {
 
-    @SerializedName("cmd_|-dump_uptime_info_|-cat /etc/zypp/suse-uptime.log|" +
-                    "sed -e '/^$/d;s/^/\"/;s/$/\",/' | tr -d '\n' | sed 's/^/[/;s/,$/]/_|-run")
+    @SerializedName("cmd_|-dump_uptime_info_|-cat /etc/zypp/suse-uptime.log | " +
+                    "sed -e '/^$/d;s/^/\"/;s/$/\",/' | tr -d '\n' | sed 's/^/[/;s/,$/]/'_|-run")
     private StateApplyResult<CmdResult> uptimeTrackerResult;
 
 
